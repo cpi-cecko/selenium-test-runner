@@ -1,5 +1,4 @@
-1. Insert baseURL at get()
-3. Go through all test cases
+11. Implement case-insensitive search
 4. Add deselectPopUp command
 5. Problem with closing login window after trying to like an article 
    (Credoweb_generalsearch...)
@@ -10,7 +9,9 @@
 9. Implement selectWindow command
 10. Implement waitForPopUp command
 
+done 1. Insert baseURL at get()
 done 2. Fix problems with cyrillic
+done 3. Go through all test cases
 
 
 Non-working tests in Selenium IDE:
