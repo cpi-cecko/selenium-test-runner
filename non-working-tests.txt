@@ -1,0 +1,86 @@
+Тестове, които не работят и къде са се счупили:
+
+[info] Playing test case Credo_searchspecialist_onlylocation_mainfunct
+[error] Element name=municipality_id not found
+
+[info] Playing test case Credo_searchproducts_relatedproducts_relatedlinks_files
+[error] Element document.serchDoctorsForm.specialization_id[9] not found
+
+[info] Playing test case Credo_searchmedicalcenter_mainfunct_links_specialist
+[error] Element name=municipality_id not found
+
+[info] Playing test case Credo_searchdoktor_follownotlogged_checkprofile_zapisvanechas_ne raboti
+[error] Element document.serchDoctorsForm.specialization_id[66] not found
+
+[info] Playing test case Credo_searchdoktor
+[error] Element document.serchDoctorsForm.specialization_id[66] not found
+
+[info] Playing test case Credo_searchdoctor and details notlogged
+[error] Element name=municipality_id not found
+
+[info] Playing test case Credo_searchcpecialistinmedicalcenter_pagging_searchmedicalcenter_notfound
+[error] Element name=municipality_id not found
+
+[info] Playing test case Credo_Publikacii_page_navigation_Last
+[error] Element css=span.icon16x16.rightArrow not found
+
+[info] Playing test case Credo_Publications_paging_home
+[error] Element //div[@id='mainHeader']/a/span not found
+
+[info] Playing test case Credo_Main_Search_open_home
+[error] Element //div[@id='mainHeader']/a/span not found
+
+[info] Playing test case Credo_login_main_searches_discussions_forum_products_CHECK
+[error] Element //div[@id='mainContent-boxes']/div[2]/a/span[2] not found
+
+[info] Playing test case Credo_login_forum_new
+[error] Element xpath=(//a[contains(text(),'Форум')])[3] not found
+
+[info] Playing test case Credo_login_change_profile
+[error] Element css=span.dropdownElement-text not found
+
+[info] Playing test case Credo_generalsearch_keyword_notlogged
+[error] Element link=За търсената от мен информация not found
+
+[info] Playing test case Credo_funct_forum_errors
+[error] Timed out after 30000ms
+[info] Executing: |clickAndWait | link=Гастроентерология | |
+[info] Executing: |clickAndWait | link=подуване на корема | |
+[info] Executing: |click | //div[@id='forum-list']/div/div/div[2] | |
+[info] Executing: |click | css=div.delete.closeModalWindow | |
+[error] Element css=div.delete.closeModalWindow not found
+
+[info] Playing test case Credo_funct_forum
+[error] Timed out after 30000ms
+[info] Executing: |clickAndWait | link=Гастроентерология | |
+[info] Executing: |clickAndWait | link=подуване на корема | |
+[info] Executing: |click | //div[@id='forum-list']/div/div/div[2] | |
+[info] Executing: |click | css=div.delete.closeModalWindow | |
+[error] Element css=div.delete.closeModalWindow not found
+
+[info] Playing test case Credo_forum_novatema_novomnenie_notlogged
+[error] Element css=div.delete.closeModalWindow not found
+
+[info] Playing test case Credo_forum_newtema_logged_follow_home_logout
+[error] Element name=username not found
+
+[info] Playing test case Credo_forum_login_profile_generalinfo_andchangeprofile_logout
+[error] Element link=Обсъждане на актуални теми not found
+
+[info] Playing test case Credo_forum_followtopic_notlogged
+[error] Element //div[@id='mainHeader']/a/span not found
+
+[info] Playing test case Credo_Discussions_Mydiscussions_blankpagebug
+[error] Element link=Моите дискусии not found
+
+[info] Playing test case Credo_discussions_follow_notlogged_for check
+[error] Timed out after 30000ms
+
+[info] Executing: |click | css=div.delete.closeModalWindow | |
+[error] Element css=div.delete.closeModalWindow not found
+
+[info] Playing test case Credo_discussions_creatediscussion
+[error] Element link=Създай дискусия not found
+
+[info] Playing test case Credo_compx_search_my checks_products_details_green
+[error] Element css=a.icon32x32.mail not found
