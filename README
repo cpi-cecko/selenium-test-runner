@@ -1,0 +1,7 @@
+Usage:
+
+1. Load the test in Selenium and export it via Java-Webdriver-Custom.
+2. Run fix-css-upper.pl on the test.
+    ./fix-css-upper.pl < [test-name].java > [out-test-name].java
+3. Add the test to an Eclipse project.
+4. Run it.
