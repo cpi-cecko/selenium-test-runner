@@ -7,18 +7,18 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class CredoSearchSpecialist {
+public class CredoMainSearch {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   public static void main(String args[]) {
-    CredoSearchSpecialist css = new CredoSearchSpecialist();
+    CredoMainSearch css = new CredoMainSearch();
   
     try {
       css.setUp();
-      css.testCredoSearchSpecialist();
+      css.testCredoMainSearch();
       css.tearDown();
     } catch (Exception e) {
       e.printStackTrace();
@@ -33,33 +33,8 @@ public class CredoSearchSpecialist {
   }
 
   @Test
-  public void testCredoSearchSpecialist() throws Exception {
+  public void testCredoMainSearch() throws Exception {
     driver.get(baseUrl + "/");
-    driver.findElement(By.name("username")).click();
-    driver.findElement(By.name("username")).clear();
-    driver.findElement(By.name("username")).sendKeys("j_borisova@abv.bg");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("kosmos11");
-    driver.findElement(By.name("loginSubmit")).click();
-    driver.findElement(By.name("username")).click();
-    driver.findElement(By.name("username")).clear();
-    driver.findElement(By.name("username")).sendKeys("j_borisova@abv.bg");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("kosmos");
-    driver.findElement(By.name("loginSubmit")).click();
-    driver.findElement(By.cssSelector("span.element-content-patient")).click();
-    driver.findElement(By.name("doctor")).click();
-    driver.findElement(By.cssSelector("div.ExAC-dropdown-result-title")).click();
-    driver.findElement(By.name("city")).click();
-    driver.findElement(By.cssSelector("div.ExAC-dropdown-result-title")).click();
-    driver.findElement(By.name("specialization")).click();
-    driver.findElement(By.xpath("//div[@id='mainContent']/div/div/div/div[2]/div/form/div[3]/div/div/div[2]/div/div[4]/div")).click();
-    driver.findElement(By.xpath("//input[@value='Търси']")).click();
-    driver.findElement(By.name("specialization")).click();
-    driver.findElement(By.name("specialization")).clear();
-    driver.findElement(By.name("specialization")).sendKeys("");
-    driver.findElement(By.cssSelector("#searchProfiles-tabs > #profileEdit-container")).click();
-    driver.findElement(By.xpath("//input[@value='Търси']")).click();
     {
       WebElement link;
       try {
@@ -83,32 +58,36 @@ public class CredoSearchSpecialist {
         link.click();
       }
     }
-    driver.findElement(By.cssSelector("span.icon16x16.rightArrow")).click();
-    driver.findElement(By.id("allContainer")).click();
-    driver.findElement(By.cssSelector("span.element-dropdown_arrow")).click();
     {
       WebElement link;
       try {
-        link = driver.findElement(By.xpath("//a[text()='Изход']"));
+        link = driver.findElement(By.xpath("//a[text()='3']"));
         try {
           link.click();
         } catch(ElementNotVisibleException ex) {
           try {
-            link = driver.findElement(By.linkText("Изход"));
+            link = driver.findElement(By.linkText("3"));
           } catch(NoSuchElementException ex2) {
-            link = driver.findElement(By.linkText("ИЗХОД"));
+            link = driver.findElement(By.linkText("3"));
           }
           link.click();
         }
       } catch(NoSuchElementException ex) {
         try {
-          link = driver.findElement(By.linkText("Изход"));
+          link = driver.findElement(By.linkText("3"));
         } catch(NoSuchElementException ex2) {
-          link = driver.findElement(By.linkText("ИЗХОД"));
+          link = driver.findElement(By.linkText("3"));
         }
         link.click();
       }
     }
+    driver.findElement(By.xpath("(//input[@name='filterText'])[3]")).clear();
+    driver.findElement(By.xpath("(//input[@name='filterText'])[3]")).sendKeys("Токуда");
+    driver.findElement(By.xpath("(//input[@type='submit'])[3]")).click();
+    driver.findElement(By.cssSelector("a.pagination-element.rightTab")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [deselectPopUp |  | ]]
+    // ERROR: Caught exception [ERROR: Unsupported command [deselectPopUp |  | ]]
+    driver.findElement(By.cssSelector("img[alt=\"CredoWeb\"]")).click();
   }
 
   @After
