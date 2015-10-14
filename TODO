@@ -1,25 +1,4 @@
-11. Implement case-insensitive search
-4. Add deselectPopUp command
-5. Problem with closing login window after trying to like an article 
-   (Credoweb_generalsearch...)
-6. Problem with Credoweb_search_specialist... It also doesn't work in Selenium
-   IDE
-7. Лечебни заведения в Credoweb_search_hospital...
-8. Implement select command
-9. Implement selectWindow command
-10. Implement waitForPopUp command
-
-done 1. Insert baseURL at get()
-done 2. Fix problems with cyrillic
-done 3. Go through all test cases
-
-
-Non-working tests in Selenium IDE:
-1. Credo_loggedin_temi_...
-2. Credo_logged_catalogs...
-3. Credo_login_events_forum...
-4. Credo_login_profile_change_pass...
-5. Credo_notlogged_events...
-6. Credo_search_hospital...
-7. Credo_search_specialist...
-8. Credo_generalsearch...
+1. Make it run with PhantomJS
+2. Time each test step
+3. Log times/test status to some file
+4. Make a bash script which 
