@@ -15,8 +15,7 @@ for test_file in "$tests_dir"/*
 do
   date=$(date +"%R %d %h %y")
   echo "[$date] Testing :$test_file:" >> test_log
-  echo "=====================================================================" >> test_log
-  echo >> test_log
+  echo "....." >> test_log
   perl $test_file >> test_log
   echo >> test_log
 done
