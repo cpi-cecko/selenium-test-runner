@@ -1,7 +1,5 @@
 Usage:
 
 1. Load the tests in Selenium and export them via Java-Webdriver-Custom.
-2. Run fix-all.sh on the tests.
-    ./fix-all.sh [java-tests-dir]
-3. Add the tests to an Eclipse project.
-4. Run them.
+2. Add the tests to an Eclipse project.
+3. Run them.
