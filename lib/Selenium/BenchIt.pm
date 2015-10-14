@@ -20,7 +20,7 @@ sub benchit {
 
     eval {
         my $time_res = timeit(1, &$func); 
-        print "Time: " . $time_res->real . "\n";
+        print "Time: " . $time_res->cpu_a . "\n";
     };
     if ($@) {
         print "Error: $@\n";
