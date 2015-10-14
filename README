@@ -1,5 +1,7 @@
 Usage:
 
-1. Load the tests in Selenium and export them via Java-Webdriver-Custom.
-2. Add the tests to an Eclipse project.
-3. Run them.
+1. Load the tests in Selenium and export them via Perl-Webdriver-Custom
+2. Run fix-all.sh <dir_to_tests>
+    where <dir_to_tests> is the directory where the tests reside
+3. Run test.sh <dir_to_tests>
+    where <dir_to_tests> is the directory where the tests reside
