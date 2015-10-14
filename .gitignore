@@ -7,3 +7,5 @@ trash/
 eclipse-workspace/
 cpanfile.snapshot
 local/
+
+test_log
