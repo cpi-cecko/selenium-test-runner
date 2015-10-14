@@ -10,8 +10,13 @@ fi
 
 for test_file in "$tests_dir"/*
 do
-    test_file_fixed="${test_file/.pl/_fixed.pl}"
-    ./make-bench.pl < "$test_file" > "$test_file_fixed"
-    rm $test_file
-    mv $test_file_fixed $test_file
+  if [ -d $test_file ]
+  then
+    continue
+  fi
+
+  test_file_fixed="${test_file/.pl/_fixed.pl}"
+  ./make-bench.pl < "$test_file" > "$test_file_fixed"
+  rm $test_file
+  mv $test_file_fixed $test_file
 done
