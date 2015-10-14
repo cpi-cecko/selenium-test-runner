@@ -2,3 +2,6 @@ credoweb.tests/*
 phantomjs-2.0.0/*
 phantomjs
 selenium-server-standalone-2.47.1.jar
+
+trash/
+eclipse-workspace/
