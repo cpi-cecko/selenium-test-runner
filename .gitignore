@@ -9,3 +9,4 @@ cpanfile.snapshot
 local/
 
 test_log
+*.zip
