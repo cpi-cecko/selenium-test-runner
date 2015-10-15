@@ -1,6 +1,8 @@
+8. Check Julia's test cases
 5. Automate export from Selenium
 6. Log test name
 7. Make the tests run on a regular basis
+
 
 Done:
 1. Make it run with PhantomJS
