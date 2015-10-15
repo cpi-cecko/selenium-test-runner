@@ -7,3 +7,4 @@ Done:
 2. Time each test step
 3. Log times/test status to some file
 4. Make a bash script which runs the scripts automatically
+* Fix problem with dynamically-generated HTML
