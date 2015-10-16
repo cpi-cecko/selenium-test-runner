@@ -12,18 +12,21 @@ BEGIN {
 }
 
 
-use Benchmark qw(:hireswallclock);
+use Time::HiRes qw(gettimeofday tv_interval);
+use Encode;
 
 
 sub benchit {
-    my $func = shift;
+    my ($elemInfo, $actionFunc) = @_;
 
+    print "Testing [$elemInfo]\n";
     eval {
-        my $time_res = timeit(1, &$func); 
-        print "Time: " . $time_res->cpu_a . "\n";
+        my $time_beg = [gettimeofday];
+        &$actionFunc;
+        print "  Time: " . tv_interval($time_beg) . "\n";
     };
     if ($@) {
-        print "Error: $@\n";
+        print "  Error: " . Encode::encode('UTF-8', $@) . "\n";
         exit;
     }
 }
