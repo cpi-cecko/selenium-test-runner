@@ -1,0 +1,6 @@
+1. Remove strings which are all-caps
+2. When waiting for a dynamic element to load, use an empty `waitForAllFields` 
+followed by `pause`
+3. Use `type` to input a string in a drop-down menu
+4. Don't use `deselectPopUp`, `select`, `waitForPopUp`, `selectWindow`, 
+`getExpression`
