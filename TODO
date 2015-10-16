@@ -1,7 +1,8 @@
-8. Check Julia's test cases
-5. Automate export from Selenium
-6. Log test name
-7. Make the tests run on a regular basis
+. Check Julia's test cases
+. Log test name
+. Use Encode where appropriate
+. Make the tests run on a regular basis
+. Automate export from Selenium
 
 
 Done:
