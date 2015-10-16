@@ -239,6 +239,7 @@ this.options = {
       "\n" +
       "use strict;\n" +
       "use warnings;\n" +
+      "use Encode;\n" +
       "use Selenium::Remote::Driver;\n" +
       "use Selenium::BenchIt;\n" +
       "use Test::More;\n" +
@@ -294,6 +295,7 @@ WDAPI.Driver = function() {
 
 WDAPI.Driver.searchContext = function(locatorType, locator) {
   var locatorString = xlateArgument(locator).replace(/([@%$])/,"\\$1");
+  locatorString = "Encode::decode('UTF-8', " + locatorString + ")";
   switch (locatorType) {
     case 'xpath':
       return locatorString + ', "xpath"';
@@ -350,6 +352,7 @@ WDAPI.Driver.prototype.refresh = function() {
 
 WDAPI.Driver.prototype.frame = function(locator) {
   var locatorString = xlateArgument(locator);
+  locatorString = "Encode::decode('UTF-8', " + locatorString + ")";
   return this.ref + "->switch_to_frame(" + locatorString + ")";
 }
 
@@ -367,6 +370,7 @@ WDAPI.Element.prototype.click = function() {
 
 WDAPI.Element.prototype.getAttribute = function(attributeName) {
   var attributeString = xlateArgument(attributeName);
+  attributeString = "Encode::decode('UTF-8', " + attributeString + ")";
   return this.ref + "->attribute(" + attributeString + ")";
 };
 
@@ -384,6 +388,7 @@ WDAPI.Element.prototype.isSelected = function() {
 
 WDAPI.Element.prototype.sendKeys = function(text) {
   var keys = xlateArgument(text).replace(/([@%$])/,"\\$1");
+  keys = "Encode::decode('UTF-8', " + keys + ")";
   return this.ref + "->send_keys(" + keys + ")";
 };
 
@@ -413,5 +418,6 @@ WDAPI.Utils = function() {
 
 WDAPI.Utils.isElementPresent = function(how, what) {
   var whatString = xlateArgument(what);
+  whatString = "Encode::decode('UTF-8', " + whatString + ")";
   return this.ref + "->is_element_present(" + whatString + ", \"" + how + "\")";
 };
