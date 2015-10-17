@@ -16,5 +16,9 @@ fi
 
 test_script_fixed="${test_script/.pl/_fixed.pl}"
 ./make-bench.pl < "$test_script" > "$test_script_fixed"
-rm $test_script
-mv $test_script_fixed $test_script
+
+if [[ $? -eq 0 ]]
+then
+  rm $test_script
+  mv $test_script_fixed $test_script
+fi

@@ -17,6 +17,10 @@ do
 
   test_file_fixed="${test_file/.pl/_fixed.pl}"
   ./make-bench.pl < "$test_file" > "$test_file_fixed"
-  rm $test_file
-  mv $test_file_fixed $test_file
+
+  if [[ $? -eq 0 ]]
+  then
+    rm $test_file
+    mv $test_file_fixed $test_file
+  fi
 done
