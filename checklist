@@ -1,9 +1,26 @@
 1. Remove strings which are all-caps
+
 2. When waiting for a dynamic element to load, use an empty `waitForAllFields` 
 followed by `pause`
-3. Use `type` to input a string in a drop-down menu
+
+3. Use `type` to input a string in a drop-down menu (not always necessary)
+
 4. Don't use `deselectPopUp`, `select`, `waitForPopUp`, `selectWindow`, 
 `getExpression`
+
 5. When there's a hidden element which has to be clicked (like an element in a
 dropdown menu), put a `mouseMove` action with target referring to the button
 which has to be hovered-over in order for the dropdown to appear
+
+6. Don't redirect the tests to sites other than the tested one
+
+7. Check for strings with trimmed witespace. Don't use `link` with them.
+   Example:
+     'още за  ' contains two witespace characters at the end. Selenium trims
+        them and breaks the tests. Check Credo_search_hospital_dropdowun
+
+     още за => 'още за  '
+
+     or
+
+     МБАЛ Св. София => ' МБАЛ Св. София  '
