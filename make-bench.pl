@@ -5,7 +5,7 @@ use warnings;
 use v5.012;
 
 
-my $to_fix = qr/^(\$driver->find_element.*"(?<elem>.+?)"\), "(?<type>.+?)"\)->(?<action>.*?);.*)/;
+my $to_fix = qr/^(\$driver->find_element.*?"(?<elem>.+?)"\), "(?<type>.+?)"\)->(?<action>.*?);.*)/;
 my $to_pause = qr/^(# ERROR:.*?Unsupported command \[getAllFields .*)/; 
 my $to_action_chain = qr/^(# ERROR:.*?Unsupported command \[mouseMove \| (?<query>.+?) .*)/;
 
