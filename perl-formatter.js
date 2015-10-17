@@ -241,6 +241,7 @@ this.options = {
       "use warnings;\n" +
       "use Encode;\n" +
       "use Selenium::Remote::Driver;\n" +
+      "use Selenium::ActionChains;\n" +
       "use Selenium::BenchIt;\n" +
       "use Test::More;\n" +
       "\n" +
