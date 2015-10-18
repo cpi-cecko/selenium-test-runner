@@ -17,7 +17,9 @@ while (<STDIN>) {
     print "\$driver->pause(500);\n";
 
   } elsif ($_ =~ $to_action_chain) {
-    my ($hover_type, $hover_query) = split /=/, $+{query};
+    my ($hover_type, @rest) = split /=/, $+{query};
+    my $hover_query = join '=', @rest;
+    $hover_query =~ s/@/\\@/;
     my $to_fix_line = <STDIN>;
 
     if (!defined $to_fix_line ||
