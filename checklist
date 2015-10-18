@@ -13,6 +13,8 @@ followed by `pause`
 dropdown menu), put a `mouseMove` action with target referring to the button
 which has to be hovered-over in order for the dropdown to appear.
 
+Always include the type of the locator in `mouseMove`.
+
 NOTE: Sometimes there are non-obvious hidden elements. To be sure, export the 
 tests to Perl, run them and see if an element could not be clicked because it's
 hidden. Such an element should be fixed.
