@@ -1,4 +1,5 @@
-1. Remove strings which are all-caps
+1. Instead of using `link` to click on links, use xpath like the following
+`//a[contains(text(),'...']`.
 
 2. When waiting for a dynamic element to load, use an empty `waitForAllFields` 
 followed by `pause`
@@ -13,14 +14,3 @@ dropdown menu), put a `mouseMove` action with target referring to the button
 which has to be hovered-over in order for the dropdown to appear
 
 6. Don't redirect the tests to sites other than the tested one
-
-7. Check for strings with trimmed witespace. Don't use `link` with them.
-   Example:
-     'още за  ' contains two witespace characters at the end. Selenium trims
-        them and breaks the tests. Check Credo_search_hospital_dropdowun
-
-     още за => 'още за  '
-
-     or
-
-     МБАЛ Св. София => ' МБАЛ Св. София  '
