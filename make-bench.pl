@@ -7,7 +7,7 @@ use v5.012;
 
 my $to_fix = qr/^(\$driver->find_element.*?"(?<elem>.+?)"\), "(?<type>.+?)"\)->(?<action>.*?);.*)/;
 my $to_pause = qr/^(# ERROR:.*?Unsupported command \[getAllFields .*)/; 
-my $to_action_chain = qr/^(# ERROR:.*?Unsupported command \[mouseMove \| (?<query>.+?) .*)/;
+my $to_action_chain = qr/^(# ERROR:.*?Unsupported command \[mouseMove \| (?<query>.+?) \| .*)/;
 
 while (<STDIN>) {
   if ($_ =~ $to_fix) {
@@ -28,7 +28,7 @@ while (<STDIN>) {
     print <<"END";
 {
   my \$hover_chain = Selenium::ActionChains->new(driver => \$driver);
-  \$hover_chain->move_to_element(\$driver->find_element(\"$hover_query\", \"$hover_type\"));
+  \$hover_chain->move_to_element(\$driver->find_element(Encode::decode('UTF-8', \"$hover_query\"), \"$hover_type\"));
   \$hover_chain->$+{action}(\$driver->find_element(Encode::decode('UTF-8', \"$+{elem}\"), \"$+{type}\"));
   benchit(\"$+{elem}, $+{type}\", sub { \$hover_chain->perform });
 }
