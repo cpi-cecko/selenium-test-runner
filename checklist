@@ -11,6 +11,10 @@ followed by `pause`
 
 5. When there's a hidden element which has to be clicked (like an element in a
 dropdown menu), put a `mouseMove` action with target referring to the button
-which has to be hovered-over in order for the dropdown to appear
+which has to be hovered-over in order for the dropdown to appear.
+
+NOTE: Sometimes there are non-obvious hidden elements. To be sure, export the 
+tests to Perl, run them and see if an element could not be clicked because it's
+hidden. Such an element should be fixed.
 
 6. Don't redirect the tests to sites other than the tested one
