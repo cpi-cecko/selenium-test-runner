@@ -14,7 +14,7 @@ while (<STDIN>) {
     print "benchit(\"$+{elem}, $+{type}\", sub { $1 });\n";
 
   } elsif ($_ =~ $to_pause) {
-    print "\$driver->pause(500);\n";
+    print "\$driver->pause(1000);\n";
 
   } elsif ($_ =~ $to_action_chain) {
     my ($hover_type, @rest) = split /=/, $+{query};
