@@ -19,4 +19,6 @@ NOTE: Sometimes there are non-obvious hidden elements. To be sure, export the
 tests to Perl, run them and see if an element could not be clicked because it's
 hidden. Such an element should be fixed.
 
+NOTE: Put `waitForAllFields` after clicking on an element in a dropdown.
+
 6. Don't redirect the tests to sites other than the tested one
