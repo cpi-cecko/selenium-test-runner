@@ -1,6 +1,7 @@
 . Check Julia's test cases
 . Make the tests run on a regular basis
 . Automate export from Selenium
+. tcpdump to log HTTP requests
 
 
 Done:
