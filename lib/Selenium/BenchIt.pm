@@ -19,14 +19,16 @@ use Encode;
 sub benchit {
     my ($elemInfo, $actionFunc) = @_;
 
-    print "Testing [$elemInfo]\n";
+    my $date = `date +"%F %T"`;
+    chomp $date;
+    print "\n$date Testing [$elemInfo]";
     eval {
         my $time_beg = [gettimeofday];
         &$actionFunc;
-        print "  Time: " . tv_interval($time_beg) . "\n";
+        print "\n$date Time: " . tv_interval($time_beg);
     };
     if ($@) {
-        print "  Error: " . Encode::encode('UTF-8', $@) . "\n";
+        print "\n$date Error: " . Encode::encode('UTF-8', $@);
         exit;
     }
 }
