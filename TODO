@@ -1,7 +1,7 @@
 . Check Julia's test cases
 . Make the tests run on a regular basis
 . Automate export from Selenium
-. tcpdump to log HTTP requests
+
 
 
 Done:
@@ -12,3 +12,5 @@ Done:
 * Fix problem with dynamically-generated HTML
 . Use Encode where appropriate
 . Log test name
+. tcpdump to log HTTP requests
+Total time, No HTTP stuff, Total steps, Sep file for each test
